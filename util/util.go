@@ -13,3 +13,18 @@ func Check(errs ...error) {
 func Lines(input string) []string {
 	return strings.Split(input, "\n")
 }
+
+func MostCommonElement(array []int) int {
+	elementCount := map[int]int{}
+	var currentMax int
+	var currentMostCommon int
+	for _, item := range array {
+		elementCount[item]++
+		if elementCount[item] > currentMax {
+			currentMax = elementCount[item]
+			currentMostCommon = item
+		}
+	}
+
+	return currentMostCommon
+}
