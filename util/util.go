@@ -28,3 +28,14 @@ func MostCommonElement(array []int) int {
 
 	return currentMostCommon
 }
+
+func CountMatches(array []int, filterValue int) int {
+	var count int
+	for _, item := range array {
+		if item == filterValue {
+			count ++
+		}
+	}
+
+	return count
+}
