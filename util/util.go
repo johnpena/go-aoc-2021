@@ -1,6 +1,8 @@
 package util
 
-import "strings"
+import (
+	"strings"
+)
 
 func Check(errs ...error) {
 	for _, err := range errs {
@@ -33,7 +35,7 @@ func CountMatches(array []int, filterValue int) int {
 	var count int
 	for _, item := range array {
 		if item == filterValue {
-			count ++
+			count++
 		}
 	}
 
