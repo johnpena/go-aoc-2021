@@ -1,6 +1,7 @@
 package util
 
 import (
+	"strconv"
 	"strings"
 )
 
@@ -56,4 +57,11 @@ func Min(i, j int) int {
 	}
 
 	return j
+}
+
+func FInt(str string) int {
+	x, err := strconv.Atoi(str)
+	Check(err)
+
+	return x
 }
